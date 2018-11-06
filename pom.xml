@@ -26,6 +26,20 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.pulsar/pulsar-client -->
+		<dependency>
+			<groupId>org.apache.pulsar</groupId>
+			<artifactId>pulsar-client</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+		<!--图形数据库neo4j-->
+		<dependency>
+			<groupId>org.neo4j.driver</groupId>
+			<artifactId>neo4j-java-driver</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
