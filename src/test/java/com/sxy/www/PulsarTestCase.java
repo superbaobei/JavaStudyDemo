@@ -24,16 +24,14 @@ public class PulsarTestCase extends BaseTestObject {
 
     }
 
-    @Test
-    public void testCreateMessage() throws PulsarClientException {
-        try(Producer<byte[]> producer = client.newProducer().topic("my-topic").create()){
-
-            producer.sendAsync("my-async-message".getBytes()).thenAccept(msgId -> {
-                System.out.printf("Message with ID %s successfully sent", msgId);
-            });
-
-        }
-    }
+//    @Test
+//    public void testCreateMessage() throws PulsarClientException {
+//        try(Producer<byte[]> producer = client.newProducer().topic("my-topic").create()){
+//            int sum = 10 ;
+//            while(sum-- > 0)
+//            producer.send("My new message".getBytes());
+//        }
+//    }
 
     @Test
     public void testCustomMessage(){

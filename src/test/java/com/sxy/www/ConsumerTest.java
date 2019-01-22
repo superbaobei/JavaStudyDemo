@@ -33,7 +33,11 @@ public class ConsumerTest {
         init();
         Consumer<byte[]> consumer = null;
         try {
-            System.out.println("create consumer");
+            System.out.println("\n\n\n\n-----------------------create consumer\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "----------------------");
             consumer = client.newConsumer()
                     .topic("my-topic")
                     .subscriptionName("my-subscription")
@@ -44,14 +48,17 @@ public class ConsumerTest {
         System.out.println("subscribe------");
 
         do {
-            CompletableFuture<Message<byte[]>> asyncMessage = consumer.receiveAsync();
-            // Wait for a message
             Message msg = consumer.receive();
-
+            System.out.println("\n\n\n\n-----------------------receive consumer\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "----------------------");
             System.out.printf("Message received: %s", new String(msg.getData()));
 
             // 确认消息，以便broker删除消息
             consumer.acknowledge(msg);
+            break;
         } while (true);
 
     }
