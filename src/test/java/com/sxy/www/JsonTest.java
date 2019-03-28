@@ -2,8 +2,6 @@ package com.sxy.www;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.core.util.StatusPrinter;
-import com.alibaba.fastjson.JSONObject;
-import org.apache.pulsar.shade.org.apache.avro.data.Json;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -19,8 +17,6 @@ import java.util.Date;
  * Created by xiangyusun on 2018/11/8.
  */
 public class JsonTest {
-
-
 
     @Test
     public void testDat(){
